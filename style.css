@@ -1,0 +1,62 @@
+:root {
+  --main-bg-color: rgba(240, 240, 240, 0.938);
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+#page-wrapper {
+  display: grid;
+}
+
+#header-img {
+  width: 300px;
+  height: 35px;
+}
+
+@media (min-width: 500px) {
+  #header {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "company-logo navbar";
+  }
+}
+
+@media (max-width: 500px) {
+  #header {
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "company-logo"
+      "navbar";
+  }
+}
+
+#nav-bar {
+  grid-area: navbar;
+}
+
+#logo {
+  grid-area: company-logo;
+}
+
+#nav-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+  margin-right: 80px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
