@@ -15,23 +15,41 @@ body {
   height: 35px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 770px) {
   #header {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-areas: "company-logo navbar";
   }
+
+  li {
+    list-style: none;
+    margin-right: 80px;
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 770px) {
   #header {
     margin-top: 10px;
+    text-align: center;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "company-logo"
       "navbar";
+  }
+
+  li {
+    list-style: none;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 1270px) {
+  li {
+    list-style: none;
+    margin-right: 40px;
   }
 }
 
@@ -47,11 +65,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-li {
-  list-style: none;
-  margin-right: 80px;
 }
 
 .nav-link {
