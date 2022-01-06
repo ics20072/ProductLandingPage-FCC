@@ -1,5 +1,6 @@
 :root {
   --main-bg-color: rgba(240, 240, 240, 0.938);
+  --my-font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -17,21 +18,43 @@ body {
 
 @media (min-width: 770px) {
   #header {
-    margin-top: 10px;
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-areas: "company-logo navbar";
+    width: 100%;
   }
 
   li {
     list-style: none;
     margin-right: 80px;
   }
+
+  #introduction {
+    text-align: center;
+    width: 100%;
+  }
+
+  #benefits {
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  .benefit-details {
+    margin-top: 0px;
+    font-family: var(--my-font-family);
+    font-size: 17px;
+    width: 95%;
+  }
+
+  .img-benefits {
+    margin-top: 17px;
+    width: 15%;
+  }
 }
 
 @media (max-width: 770px) {
   #header {
-    margin-top: 10px;
+    width: 80%;
     text-align: center;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -43,6 +66,29 @@ body {
   li {
     list-style: none;
     margin-right: 40px;
+  }
+
+  #introduction {
+    text-align: center;
+    width: 80%;
+  }
+
+  #benefits {
+    margin: auto;
+    margin-top: 100px;
+    align-items: center;
+  }
+
+  .benefit-details {
+    margin-top: 0px;
+    font-family: var(--my-font-family);
+    font-size: 17px;
+    width: 70%;
+  }
+
+  .img-benefits {
+    margin-top: 35px;
+    width: 15%;
   }
 }
 
@@ -71,15 +117,11 @@ body {
   text-decoration: none;
   color: black;
   font-size: 17px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#introduction {
-  text-align: center;
+  font-family: var(--my-font-family);
 }
 
 h2 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--my-font-family);
   font-size: 23px;
 }
 
@@ -105,4 +147,39 @@ hr {
   font-size: 18px;
   width: 150px;
   height: 28px;
+}
+
+#submit:hover {
+  background-color: rgb(163, 127, 7);
+  cursor: pointer;
+}
+
+.container-benefits {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.img-benefits img {
+  width: 60px;
+}
+
+.content-benefits {
+  width: 85%;
+}
+
+.benefit-title {
+  font-size: 26px;
+  font-weight: bold;
+  font-family: var(--my-font-family);
+  margin-bottom: 0px;
+}
+
+#container-video {
+  margin: auto;
+  margin-top: 50px;
+}
+
+#video {
+  width: 540px;
+  height: 330px;
 }
