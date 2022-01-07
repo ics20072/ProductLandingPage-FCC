@@ -54,7 +54,7 @@ body {
 
 @media (max-width: 770px) {
   #header {
-    width: 80%;
+    width: 100%;
     text-align: center;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -70,7 +70,7 @@ body {
 
   #introduction {
     text-align: center;
-    width: 80%;
+    width: 100%;
   }
 
   #benefits {
@@ -83,7 +83,8 @@ body {
     margin-top: 0px;
     font-family: var(--my-font-family);
     font-size: 17px;
-    width: 70%;
+    text-align: justify;
+    width: 80%;
   }
 
   .img-benefits {
