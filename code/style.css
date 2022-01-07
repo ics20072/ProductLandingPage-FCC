@@ -5,6 +5,7 @@
 
 body {
   background-color: var(--main-bg-color);
+  margin: 0px;
 }
 
 #page-wrapper {
@@ -18,10 +19,14 @@ body {
 
 @media (min-width: 770px) {
   #header {
+    padding-top: 10px;
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-areas: "company-logo navbar";
     width: 100%;
+    position: fixed;
+    background-color: rgba(240, 240, 240);
+    border-bottom: 1px solid black;
   }
 
   li {
@@ -30,6 +35,7 @@ body {
   }
 
   #introduction {
+    margin-top: 70px;
     text-align: center;
     width: 100%;
   }
@@ -50,17 +56,40 @@ body {
     margin-top: 17px;
     width: 15%;
   }
+
+  #pricelist {
+    width: 50%;
+    display: grid;
+    margin: auto;
+    margin-top: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "tenor bass valve";
+    grid-column-gap: 20px;
+  }
+
+  #my-footer {
+    padding-top: 10px;
+    margin: auto;
+    margin-top: 70px;
+    width: 53%;
+    text-align: right;
+    background-color: rgb(216, 215, 215);
+  }
 }
 
 @media (max-width: 770px) {
   #header {
     width: 100%;
+    padding-top: 7px;
     text-align: center;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "company-logo"
       "navbar";
+    position: fixed;
+    background-color: rgba(240, 240, 240);
+    border-bottom: 1px solid black;
   }
 
   li {
@@ -69,6 +98,7 @@ body {
   }
 
   #introduction {
+    margin-top: 100px;
     text-align: center;
     width: 100%;
   }
@@ -84,12 +114,34 @@ body {
     font-family: var(--my-font-family);
     font-size: 17px;
     text-align: justify;
-    width: 80%;
+    width: 90%;
   }
 
   .img-benefits {
     margin-top: 35px;
     width: 15%;
+  }
+
+  #pricelist {
+    width: 50%;
+    display: grid;
+    margin: auto;
+    margin-top: 100px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "tenor"
+      "bass"
+      "valve";
+    grid-row-gap: 20px;
+  }
+
+  #my-footer {
+    padding-top: 10px;
+    margin: auto;
+    margin-top: 70px;
+    width: 100%;
+    text-align: right;
+    background-color: rgb(216, 215, 215);
   }
 }
 
@@ -183,4 +235,76 @@ hr {
 #video {
   width: 540px;
   height: 330px;
+}
+
+.trombones-price {
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 7px;
+}
+
+#tenor-trombone {
+  grid-area: tenor;
+}
+
+#bass-trombone {
+  grid-area: bass;
+}
+
+#valve-trombone {
+  grid-area: valve;
+}
+
+.trombones-price h3 {
+  margin-top: 0px;
+  font-family: var(--my-font-family);
+  font-size: 15px;
+  background-color: rgb(216, 215, 215);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.trombones-price h2 {
+  font-family: var(--my-font-family);
+  font-size: 25px;
+}
+
+.trombones-price p {
+  font-family: var(--my-font-family);
+}
+
+.trombones-price button {
+  background-color: rgb(255, 187, 0);
+  border-style: none;
+  padding: 12px 23px 12px 23px;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.trombones-price button:hover {
+  background-color: rgb(255, 145, 0);
+  cursor: pointer;
+}
+
+#footer-bar {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  justify-content: right;
+  margin-bottom: 7px;
+}
+
+#footer-bar li {
+  margin-right: 20px;
+  font-family: var(--my-font-family);
+  font-size: 16px;
+}
+
+#my-footer p {
+  margin-top: 7px;
+  margin-right: 20px;
+  font-family: var(--my-font-family);
+  font-size: 14px;
+  color: rgb(90, 88, 88);
 }
